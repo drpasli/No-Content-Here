@@ -1,0 +1,167 @@
+/* Container & Elements - Dengan tema lebih gelap dan futuristik */
+.empty-container {
+    text-align: center;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.word-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.letter-ball {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(145deg, #2a2a3c, #1a1a2c);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    color: #8b5cf6;
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+    box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.1),
+        inset -2px -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.floating-ball {
+    position: absolute;
+    background: linear-gradient(45deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float 20s linear infinite, pulseGlow 3s ease-in-out infinite;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+}
+
+/* Cursor Styles - Dengan efek neon */
+.cursor {
+    width: 15px;
+    height: 15px;
+    background: #8b5cf6;
+    border-radius: 50%;
+    mix-blend-mode: screen;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px #8b5cf6;
+    position: fixed; /* Menambahkan position: fixed */
+    z-index: 9999; /* Menambahkan z-index yang lebih tinggi */
+    pointer-events: none; /* Memastikan cursor tidak menghalangi interaksi */
+}
+
+.cursor-glow {
+    width: 35px;
+    height: 35px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 998;
+    animation: cursorPulse 2s infinite;
+    position: fixed; /* Menambahkan position: fixed */
+    pointer-events: none; /* Memastikan cursor-glow tidak menghalangi interaksi */
+}
+
+/* Animations - Diperbarui dengan timing yang berbeda */
+@keyframes cursorPulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.7);
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+}
+
+.letter-ball:nth-child(odd) {
+    animation: floatY 3s infinite ease-in-out;
+}
+
+.letter-ball:nth-child(even) {
+    animation: floatX 2.5s infinite ease-in-out;
+}
+
+@keyframes floatY {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(2deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(-2deg);
+    }
+}
+
+@keyframes floatX {
+
+    0%,
+    100% {
+        transform: translateX(0) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateX(10px) rotate(2deg);
+    }
+}
+
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(139, 92, 246, 0.4);
+    }
+}
+
+/* Responsive - Dengan breakpoint yang diperbarui */
+@media screen and (max-width: 768px) {
+
+    .cursor,
+    .cursor-glow {
+        display: none;
+    }
+
+    .letter-ball {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .empty-container {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .letter-ball {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .empty-container {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .word-container {
+        gap: 0.8rem;
+        padding: 0.8rem;
+    }
+}

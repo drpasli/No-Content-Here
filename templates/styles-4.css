@@ -1,0 +1,160 @@
+/*
+=========================================
+Styles - 4 
+Theme: Modern Minimalist
+Created by: drp.web.id
+
+Free for use
+=========================================
+*/
+
+/* Container & Elements - With modern minimalist theme */
+.empty-container {
+    text-align: center;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.word-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.letter-ball {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(145deg, #ffffff, #f5f5f5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    color: #333333;
+    box-shadow: 
+        8px 8px 15px rgba(0, 0, 0, 0.1),
+        -8px -8px 15px rgba(255, 255, 255, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.letter-ball:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        12px 12px 20px rgba(0, 0, 0, 0.15),
+        -12px -12px 20px rgba(255, 255, 255, 0.8);
+}
+
+.floating-ball {
+    position: absolute;
+    background: linear-gradient(45deg, rgba(245, 245, 245, 0.05), rgba(255, 255, 255, 0.1));
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float 20s linear infinite;
+    backdrop-filter: blur(3px);
+}
+
+/* Cursor Styles - Minimalist */
+.cursor {
+    width: 12px;
+    height: 12px;
+    background: #666666;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    transition: all 0.3s ease;
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.cursor-glow {
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    z-index: 998;
+    animation: cursorPulse 2s infinite;
+    position: fixed;
+    pointer-events: none;
+}
+
+/* Animations - Smoother and more subtle */
+@keyframes cursorPulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.4);
+        opacity: 0.2;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+}
+
+.letter-ball:nth-child(odd) {
+    animation: floatY 4s infinite ease-in-out;
+}
+
+.letter-ball:nth-child(even) {
+    animation: floatX 3.5s infinite ease-in-out;
+}
+
+@keyframes floatY {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes floatX {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .cursor,
+    .cursor-glow {
+        display: none;
+    }
+
+    .letter-ball {
+        width: 55px;
+        height: 55px;
+        font-size: 1.6rem;
+    }
+
+    .empty-container {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .letter-ball {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+
+    .word-container {
+        gap: 1rem;
+        padding: 0.8rem;
+    }
+} 
