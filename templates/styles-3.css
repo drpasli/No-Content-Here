@@ -1,4 +1,15 @@
-/* Container & Elements - Dengan tema cyberpunk neon */
+/*
+=========================================
+Styles - 3 
+Theme: Cyberpunk Neon
+Created by: drp.web.id
+Github Repository: https://github.com/drpasli/No-Content-Template
+
+Free for use
+=========================================
+*/
+
+/* Container & Elements - With cyberpunk neon theme */
 .empty-container {
     text-align: center;
     z-index: 1;
@@ -27,7 +38,7 @@
     justify-content: center;
     align-items: center;
     font-size: 1.8rem;
-    color: #00ff88;  /* Warna neon hijau */
+    color: #00ff88;  
     text-shadow: 0 0 10px rgba(0, 255, 136, 0.7);
     box-shadow: inset 2px 2px 5px rgba(0, 255, 136, 0.2),
                 inset -2px -2px 5px rgba(0, 0, 0, 0.5),
@@ -44,11 +55,11 @@
     box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
 }
 
-/* Cursor Styles - Dengan efek neon cyberpunk */
+/* Cursor Styles - With cyberpunk neon effect */
 .cursor {
     width: 15px;
     height: 15px;
-    background: #00ffff;  /* Warna neon cyan */
+    background: #00ffff;  
     border-radius: 50%;
     mix-blend-mode: screen;
     transition: all 0.3s ease;
@@ -69,7 +80,7 @@
     pointer-events: none;
 }
 
-/* Animations - Dengan efek cyberpunk */
+/* Animations - With cyberpunk effects */
 @keyframes cursorPulse {
     0% {
         transform: scale(1);
@@ -87,13 +98,13 @@
 
 .letter-ball:nth-child(odd) {
     animation: floatY 3s infinite ease-in-out;
-    color: #00ffff;  /* Bola ganjil warna cyan */
+    color: #00ffff;  
     text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
 }
 
 .letter-ball:nth-child(even) {
     animation: floatX 2.5s infinite ease-in-out;
-    color: #ff00ff;  /* Bola genap warna magenta */
+    color: #ff00ff; 
     text-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
 }
 
@@ -117,7 +128,6 @@
 
 /* Responsive */
 @media screen and (max-width: 768px) {
-
     .cursor,
     .cursor-glow {
         display: none;

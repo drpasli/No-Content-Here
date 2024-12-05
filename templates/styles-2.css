@@ -1,4 +1,15 @@
-/* Container & Elements - Dengan tema lebih gelap dan futuristik */
+/*
+=========================================
+Styles - 2 
+Theme: Dark Futuristic
+Created by: drp.web.id
+Github Repository: https://github.com/drpasli/No-Content-Template
+
+Free for use
+=========================================
+*/
+
+/* Container & Elements - With dark futuristic theme */
 .empty-container {
     text-align: center;
     z-index: 1;
@@ -42,7 +53,7 @@
     box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
 }
 
-/* Cursor Styles - Dengan efek neon */
+/* Cursor Styles - With neon effect */
 .cursor {
     width: 15px;
     height: 15px;
@@ -51,9 +62,9 @@
     mix-blend-mode: screen;
     transition: all 0.3s ease;
     box-shadow: 0 0 15px #8b5cf6;
-    position: fixed; /* Menambahkan position: fixed */
-    z-index: 9999; /* Menambahkan z-index yang lebih tinggi */
-    pointer-events: none; /* Memastikan cursor tidak menghalangi interaksi */
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
 }
 
 .cursor-glow {
@@ -63,11 +74,11 @@
     border-radius: 50%;
     z-index: 998;
     animation: cursorPulse 2s infinite;
-    position: fixed; /* Menambahkan position: fixed */
-    pointer-events: none; /* Memastikan cursor-glow tidak menghalangi interaksi */
+    position: fixed;
+    pointer-events: none;
 }
 
-/* Animations - Diperbarui dengan timing yang berbeda */
+/* Animations */
 @keyframes cursorPulse {
     0% {
         transform: scale(1);
@@ -94,7 +105,6 @@
 }
 
 @keyframes floatY {
-
     0%,
     100% {
         transform: translateY(0) rotate(2deg);
@@ -106,7 +116,6 @@
 }
 
 @keyframes floatX {
-
     0%,
     100% {
         transform: translateX(0) rotate(-2deg);
@@ -118,7 +127,6 @@
 }
 
 @keyframes pulseGlow {
-
     0%,
     100% {
         box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
@@ -129,9 +137,8 @@
     }
 }
 
-/* Responsive - Dengan breakpoint yang diperbarui */
+/* Responsive */
 @media screen and (max-width: 768px) {
-
     .cursor,
     .cursor-glow {
         display: none;

@@ -1,4 +1,15 @@
-/* Container & Elements */
+/*
+=========================================
+Styles - 1 
+Theme: Clean & Simple
+Created by: drp.web.id
+Github Repository: https://github.com/drpasli/No-Content-Template
+
+Free for use
+=========================================
+*/
+
+/* Container & Elements - Clean and simple theme */
 .empty-container {
     text-align: center;
     z-index: 1;
@@ -35,7 +46,7 @@
     opacity: 0;
 }
 
-/* Cursor Styles */
+/* Cursor Styles - Simple glowing cursor */
 .cursor, .cursor-glow {
     display: block;
     position: fixed;
@@ -61,9 +72,7 @@
     animation: cursorGlow 1.5s infinite;
 }
 
-
-
-/* Animations */
+/* Animations - Smooth transitions and movements */
 @keyframes cursorGlow {
     0% {
         transform: scale(1);
@@ -129,7 +138,7 @@
     }
 }
 
-/* Responsive */
+/* Responsive - Mobile and tablet optimizations */
 @media screen and (max-width: 768px) {
     .cursor, .cursor-glow {
         display: none;
