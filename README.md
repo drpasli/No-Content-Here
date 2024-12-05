@@ -41,5 +41,5 @@ Free to use for both personal and commercial purposes.
 
 ## Credits
 
-GitHub Repository: [No-Content-Template](https://github.com/drpasli/No-Content-Template)
-Created by [drpasli](https://www.drp.web.id)
+- GitHub Repository: [No-Content-Template](https://github.com/drpasli/No-Content-Template)
+- Created by [drpasli](https://www.drp.web.id)
